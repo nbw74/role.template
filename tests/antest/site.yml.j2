@@ -1,0 +1,11 @@
+---
+- name: Local role testing
+  hosts: localhost
+  gather_facts: false
+  gather_subset: min
+  collections:
+    - community.kubernetes
+
+  roles:
+    - {{ role_name }}
+...
