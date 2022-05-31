@@ -1,10 +1,8 @@
 ---
 - name: Local role testing
-  hosts: localhost
-  gather_facts: false
+  hosts: GROUP
   gather_subset: min
-  collections:
-    - community.kubernetes
+  diff: true
 
   roles:
     - {{ role_name }}

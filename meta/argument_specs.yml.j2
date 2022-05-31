@@ -1,0 +1,23 @@
+---
+argument_specs:
+  main:
+    short_description: The main entry point for the {{ role_name }} role.
+    options:
+      LIST:
+        type: list
+        required: true
+        elements: str
+      STR_WITH_CHOICES:
+        type: str
+        choices:
+          - node
+          - jumpbox
+      STR:
+        type: str
+      DICT:
+        type: dict
+        options:
+          OPTION:
+            type: str
+            required: true
+...
